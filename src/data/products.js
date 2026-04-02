@@ -1,0 +1,113 @@
+export const allProducts = [
+    {
+        id: 1,
+        name: "Easy Bake Setting Spray with 16-Hour Wear",
+        image: "/Product-Photos/EASYBAKE-SETTING SPRAY-PDP_PACKSHOT.jpg",
+        price: "$35.00",
+        rating: "4.5/5",
+    },
+    {
+        id: 2,
+        name: "Blush Filter Liquid Blush New Shades",
+        image: "/Product-Photos/ALL-BLUSH-PDP-PACKSHOTS_BUBBLEGUM.jpg",
+        price: "$29.00",
+        rating: "4.5/5",
+    },
+    {
+        id: 3,
+        name: "Smoky Oud",
+        image: "/Product-Photos/SMOKY-OUD.jpg",
+        price: "$225.00",
+        rating: "4.5/5",
+    },
+    {
+        id: 4,
+        name: "Lovefest Burning Cherry | 48 All Over Body Spray",
+        image: "/Product-Photos/KY-BodySprays-0808.jpg",
+        price: "$48.00",
+        rating: "4.5/5",
+    },
+    {
+        id: 5,
+        name: "Vanilla | 28",
+        image: "/Product-Photos/KAY_100ml_Vanilla_Bottle.jpg",
+        price: "$139.00",
+        rating: "4.5/5",
+    },
+    {
+        id: 6,
+        name: "Easy Prime & Blur Foundation Kit",
+        image: "/Product-Photos/PRIMEBLURNoDiscount-u.jpg",
+        price: "$69.00",
+        rating: "4.5/5",
+    },
+    {
+        id: 7,
+        name: "Liquid Matte Ultra-Comfort Transfer-Proof Lipstick",
+        image: "/Product-Photos/LIQUID-MATTE-PACKSHOT-MISS-AMERICA.jpg",
+        price: "$29.00",
+        rating: "4.5/5",
+    },
+    {
+        id: 8,
+        name: "Easy Bake Loose Baking & Setting Powder",
+        image: "/Product-Photos/HB-EasyBake-6BananaBread-Packshots-2.jpg",
+        price: "$46.00",
+        rating: "4.5/5",
+    },
+    {
+        id: 9,
+        name: "#FAUXFILTER Under Eye Color Corrector",
+        image: "/Product-Photos/HB_FFCC-REFRESH_PACKSHOT_MANGO.jpg",
+        price: "$33.00",
+        rating: "4.5/5",
+    },
+    {
+        id: 10,
+        name: "Easy Bake and Snatch Pressed Talc-Free Brightening and Setting Powder",
+        image: "/Product-Photos/EASY BAKE PRESSED-PDP-PACKSHOTS_BANANA-BREAD.jpg",
+        price: "$41.00",
+        rating: "4.5/5",
+    },
+    {
+        id: 11,
+        name: "Cheeky Tint Blush Stick Brush",
+        image: "/Product-Photos/CheekyTintBSB4.jpg",
+        price: "$29.00",
+        rating: "4.5/5",
+    },
+    {
+        id: 12,
+        name: "GloWish Blur Jam Silicone-Free Smoothing Primer",
+        image: "/Product-Photos/Glowish-Blur-Jam-1.jpg",
+        price: "$38.00",
+        rating: "4.5/5",
+    },
+];
+
+export const bestSellers = [
+    {
+        id: 1,
+        name: "Pretty Grunge Liquid Matte Lip Quad",
+        image: "/Product-Photos/HB-PrettyGrunge-LM-Quad.jpg",
+        price: "$33.00",
+    },
+    {
+        id: 2,
+        name: "Liquid Matte and Silk Balm Duowder",
+        image: "/Product-Photos/HB-PrettyGrunge-GrungeLipDuo.jpg",
+        price: "$29.00",
+    },
+    {
+        id: 3,
+        name: "Pretty Grunge Palette",
+        image: "/Product-Photos/PRETTY-GRUNGEPACKSHOT-pallet-2023.jpg",
+        price: "$69.00",
+    },
+    {
+        id: 4,
+        name: "Pretty Grunge Face Gloss",
+        image: "/Product-Photos/PRETTY-GRUNGE_PACKSHOT.jpg",
+        price: "$44.00",
+    },
+];
