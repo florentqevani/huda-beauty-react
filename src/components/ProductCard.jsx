@@ -63,7 +63,7 @@ export default function ProductCard({ product, onAddToCart }) {
                     </div>
                 )}
                 <div className="product-card__footer">
-                    <span className="product-card__price">{price}</span>
+                    <span className="product-card__price">{price}$</span>
                     <button
                         className="product-card__cart-btn"
                         onClick={handleAddToCart}
