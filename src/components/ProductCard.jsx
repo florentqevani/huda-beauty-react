@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
 export default function ProductCard({ product, onAddToCart }) {
     const [adding, setAdding] = useState(false);
+    const navigate = useNavigate();
 
     const handleAddToCart = async () => {
         if (!onAddToCart) return;
@@ -28,8 +30,13 @@ export default function ProductCard({ product, onAddToCart }) {
         return "ri-star-line";
     };
 
+    const handleCardClick = (e) => {
+        if (e.target.closest("button")) return;
+        navigate(`/product/${product.id}`);
+    };
+
     return (
-        <div className="product-card">
+        <div className="product-card" onClick={handleCardClick} onKeyDown={(e) => { if (e.key === 'Enter') handleCardClick(e); }} role="link" tabIndex={0} style={{ cursor: "pointer" }}>
             <div className="product-card__img">
                 <img src={product.image} alt={product.name} loading="lazy" />
                 <button

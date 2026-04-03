@@ -50,9 +50,6 @@ export default function Footer() {
                         educational purposes!
                     </p>
                 </div>
-                <div className="end-img">
-                    <img src="/IMG-20240426-WA0006.jpg" alt="" />
-                </div>
             </div>
         </>
     );

@@ -11,7 +11,7 @@ export default function Hero() {
                         sjellim artin e grimit më afër përditshmërisë tënde. Zbulo vetveten,
                         ndihu mirë në lëkurën tënde dhe le bukuria jote të flasë vetë.
                     </p>
-                    <a href="#" className="btn">
+                    <a href="#Arrivals" className="btn">
                         Shop Now
                     </a>
                 </div>

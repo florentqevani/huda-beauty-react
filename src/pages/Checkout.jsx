@@ -25,6 +25,25 @@ export default function Checkout() {
     const shipping = cartTotal >= 100 ? 0 : 10;
     const total = cartTotal + shipping;
 
+    const handleCardNumberChange = (e) => {
+        const digits = e.target.value.replace(/\D/g, '').slice(0, 16);
+        const formatted = digits.replace(/(\d{4})(?=\d)/g, '$1 ');
+        setCardNumber(formatted);
+    };
+
+    const handleExpiryChange = (e) => {
+        let val = e.target.value.replace(/[^\d]/g, '').slice(0, 4);
+        if (val.length >= 2) {
+            val = val.slice(0, 2) + '/' + val.slice(2);
+        }
+        setCardExpiry(val);
+    };
+
+    const handleCvcChange = (e) => {
+        const digits = e.target.value.replace(/\D/g, '').slice(0, 4);
+        setCardCvc(digits);
+    };
+
     if (!user) {
         return (
             <section className="checkout-page">
@@ -137,16 +156,16 @@ export default function Checkout() {
                             <div className="payment-details">
                                 <div className="form-group">
                                     <label>Card Number</label>
-                                    <input type="text" placeholder="1234 5678 9012 3456" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} maxLength="19" required />
+                                    <input type="text" inputMode="numeric" placeholder="1234 5678 9012 3456" value={cardNumber} onChange={handleCardNumberChange} maxLength="19" required />
                                 </div>
                                 <div className="form-row">
                                     <div className="form-group">
                                         <label>Expiry Date</label>
-                                        <input type="text" placeholder="MM/YY" value={cardExpiry} onChange={(e) => setCardExpiry(e.target.value)} maxLength="5" required />
+                                        <input type="text" inputMode="numeric" placeholder="MM/YY" value={cardExpiry} onChange={handleExpiryChange} maxLength="5" required />
                                     </div>
                                     <div className="form-group">
                                         <label>CVC</label>
-                                        <input type="text" placeholder="123" value={cardCvc} onChange={(e) => setCardCvc(e.target.value)} maxLength="4" required />
+                                        <input type="text" inputMode="numeric" placeholder="123" value={cardCvc} onChange={handleCvcChange} maxLength="4" required />
                                     </div>
                                 </div>
                             </div>

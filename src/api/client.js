@@ -211,3 +211,27 @@ export async function deleteUserAPI(id) {
     const res = await apiFetch(`/admin/users/${id}`, { method: 'DELETE' });
     return res.json();
 }
+
+// Reviews API
+export async function fetchProduct(id) {
+    const res = await fetch(`${API_BASE}/products/${id}`);
+    return res.json();
+}
+
+export async function fetchReviews(productId) {
+    const res = await fetch(`${API_BASE}/products/${productId}/reviews`);
+    return res.json();
+}
+
+export async function createReviewAPI(productId, rating, comment) {
+    const res = await apiFetch(`/products/${productId}/reviews`, {
+        method: 'POST',
+        body: JSON.stringify({ rating, comment }),
+    });
+    return res.json();
+}
+
+export async function deleteReviewAPI(productId, reviewId) {
+    const res = await apiFetch(`/products/${productId}/reviews/${reviewId}`, { method: 'DELETE' });
+    return res.json();
+}
