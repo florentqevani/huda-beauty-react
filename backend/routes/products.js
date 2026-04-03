@@ -2,6 +2,7 @@ import { Router } from 'express';
 import multer from 'multer';
 import path from 'path';
 import crypto from 'crypto';
+import os from 'os';
 import {
     getAllProducts,
     getProduct,
@@ -12,8 +13,10 @@ import {
 } from '../controllers/productController.js';
 import { authenticateToken, requireAdmin } from '../middleware/auth.js';
 
+const uploadsDir = process.env.VERCEL ? os.tmpdir() : 'uploads/';
+
 const storage = multer.diskStorage({
-    destination: (req, file, cb) => cb(null, 'uploads/'),
+    destination: (req, file, cb) => cb(null, uploadsDir),
     filename: (req, file, cb) => {
         const uniqueName = crypto.randomBytes(8).toString('hex') + path.extname(file.originalname);
         cb(null, uniqueName);
